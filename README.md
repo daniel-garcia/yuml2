@@ -32,7 +32,7 @@ read from stdin or write to stdout.
 
 Examples
 --------
-
+You can make class diagrams:
 ```
 echo '[Customer]1-0..*[Address]' | yuml - example.png
 ```
@@ -45,4 +45,5 @@ curl --silent https://raw.githubusercontent.com/daniel-garcia/yuml/master/sample
 ![Sample Use Case](http://yuml.me/diagram/scruffy/usecase/%5BCustomer%5D-(Sign%20In),%20%5BCustomer%5D-(Buy%20Products),%20(Buy%20Products)%3E(Browse%20Products),%20(Buy%20Products)%3E(Checkout),%20(Checkout)%3C(Add%20New%20Credit%20Card).png)
 
 
+For more examples, visit http://yuml.me
 
