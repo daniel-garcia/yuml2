@@ -25,6 +25,8 @@ type optionsT struct {
 	use       string
 }
 
+const version = "0.1.0"
+
 var (
 	options = optionsT{}
 	baseURL = "http://yuml.me/diagram"
@@ -75,6 +77,7 @@ func generate(opts optionsT, input io.Reader, output io.Writer) error {
 
 func init() {
 	flag.Usage = func() {
+		fmt.Fprintf(os.Stderr, "%s v%s\n", os.Args[0], version)
 		fmt.Fprintf(os.Stderr, "Usage: %s [INPUT_FILE] [OUTPUT_FILE]\n", os.Args[0])
 		flag.PrintDefaults()
 	}
