@@ -17,7 +17,7 @@ Usage
 -----
 
 ```
-Usage: yuml [INPUT_FILE] [OUTPUT_FILE]
+Usage: ./yuml [options] INPUT_FILE OUTPUT_FILE
   -direction="LR": text direction (LR, RL, TD)
   -format="": format of output (png, pdf, jpg, svg)
   -scale=0: percentage to scale output
@@ -27,6 +27,17 @@ Usage: yuml [INPUT_FILE] [OUTPUT_FILE]
 ```
 
 You can set the YUML_ENDPOINT environment variable to point
-to your own yuml server.
+to your own yuml server. The dash "-" character can be used to
+read from stdin or write to stdout.
+
+Examples
+--------
+
+```
+echo '[Customer]1-0..*[Address]' | yuml - example.png
+```
+![Customer to Address](http://yuml.me/diagram/scruffy/class/[Customer]-%3E[Billing%20Address])
+
+
 
 
