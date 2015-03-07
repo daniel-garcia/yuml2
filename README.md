@@ -1,5 +1,5 @@
 # yuml
-A yuml.me client that is written in Go. It was inspired by a 
+A yuml.me client that is written in Go (golang). It was inspired by a 
 python client for yuml, https://github.com/wandernauta/yuml .
 This client compiles to a static binary with no additional
 dependencies (runtimes or libraries) which makes it ideal to
