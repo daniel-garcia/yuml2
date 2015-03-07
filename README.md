@@ -38,6 +38,11 @@ echo '[Customer]1-0..*[Address]' | yuml - example.png
 ```
 ![Customer to Address](http://yuml.me/diagram/scruffy/class/[Customer]-%3E[Billing%20Address])
 
+You can also create use case digrams:
+```
+curl --silent https://raw.githubusercontent.com/daniel-garcia/yuml/master/sample_usecase.yuml | ./yuml - sample_usecase.png
+```
+![Sample Use Case](http://yuml.me/diagram/scruffy/usecase/%5BCustomer%5D-(Sign%20In),%20%5BCustomer%5D-(Buy%20Products),%20(Buy%20Products)%3E(Browse%20Products),%20(Buy%20Products)%3E(Checkout),%20(Checkout)%3C(Add%20New%20Credit%20Card).png)
 
 
 

@@ -78,7 +78,8 @@ func generate(opts optionsT, input io.Reader, output io.Writer) error {
 func init() {
 	flag.Usage = func() {
 		fmt.Fprintf(os.Stderr, "%s v%s\n", os.Args[0], version)
-		fmt.Fprintf(os.Stderr, "Usage: %s [INPUT_FILE] [OUTPUT_FILE]\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "Usage: %s [options] INPUT_FILE OUTPUT_FILE\n", os.Args[0])
+		fmt.Fprintf(os.Stderr, "'-' can be used for stdin or stdout\n")
 		flag.PrintDefaults()
 	}
 
