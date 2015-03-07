@@ -1,7 +1,7 @@
 package main
 
 // Copyright 2015, Daniel Garcia <daniel@danielgarcia.info>
-// yuml is distributed under the MIT license.
+// yuml2 is distributed under the MIT license.
 //
 // Based on the python yuml client https://github.com/wandernauta/yuml
 // by Wander Nauta
