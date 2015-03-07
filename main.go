@@ -79,12 +79,15 @@ func init() {
 		flag.PrintDefaults()
 	}
 
+	if endpoint := os.Getenv("YUML_ENDPOINT"); len(endpoint) > 0 {
+		baseURL = endpoint
+	}
 	flag.IntVar(&options.scale, "scale", 0, "percentage to scale output")
 	flag.StringVar(&options.direction, "direction", "LR", "text direction (LR, RL, TD)")
 	flag.StringVar(&options.style, "style", "scruffy", "style of image (scruffy, nofunky, plain)")
-	flag.StringVar(&options.format, "format", "", "format of output (png, pdf, jpg, svg")
+	flag.StringVar(&options.format, "format", "", "format of output (png, pdf, jpg, svg)")
 	flag.StringVar(&options.use, "t", "class", "type of diagram (class, activity, usecase)")
-	flag.StringVar(&baseURL, "u", "http://yuml.me/diagram", "base url for service")
+	flag.StringVar(&baseURL, "u", baseURL, "base url for service (YUML_ENDPOINT) ")
 }
 
 func main() {
