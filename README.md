@@ -1,4 +1,4 @@
-# yuml
+# yuml2
 A yuml.me client that is written in Go (golang). It was inspired by a 
 python client for yuml, https://github.com/wandernauta/yuml .
 This client compiles to a static binary with no additional
@@ -10,14 +10,14 @@ Installation
 ------------
 
 ```bash
-go get github.com/daniel-garcia/yuml
+go get github.com/daniel-garcia/yuml2
 ```
 
 Usage
 -----
 
 ```
-Usage: ./yuml [options] INPUT_FILE OUTPUT_FILE
+Usage: yuml2 [options] INPUT_FILE OUTPUT_FILE
   -direction="LR": text direction (LR, RL, TD)
   -format="": format of output (png, pdf, jpg, svg)
   -scale=0: percentage to scale output
@@ -34,13 +34,13 @@ Examples
 --------
 You can make class diagrams:
 ```
-echo '[Customer]1-0..*[Address]' | yuml - example.png
+echo '[Customer]1-0..*[Address]' | yuml2 - example.png
 ```
 ![Customer to Address](http://yuml.me/diagram/scruffy/class/[Customer]-%3E[Billing%20Address])
 
 You can also create use case digrams:
 ```
-curl --silent https://raw.githubusercontent.com/daniel-garcia/yuml/master/sample_usecase.yuml | ./yuml - sample_usecase.png
+curl --silent https://raw.githubusercontent.com/daniel-garcia/yuml2/master/sample_usecase.yuml | yuml2 - sample_usecase.png
 ```
 ![Sample Use Case](http://yuml.me/diagram/scruffy/usecase/%5BCustomer%5D-(Sign%20In),%20%5BCustomer%5D-(Buy%20Products),%20(Buy%20Products)%3E(Browse%20Products),%20(Buy%20Products)%3E(Checkout),%20(Checkout)%3C(Add%20New%20Credit%20Card).png)
 
