@@ -6,8 +6,9 @@ Inspired by a python client for yuml, https://github.com/wandernauta/yuml
 Installation
 ------------
 
+```bash
 go get github.com/daniel-garcia/yuml
-
+```
 
 Usage
 -----
