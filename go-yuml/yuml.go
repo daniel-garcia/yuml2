@@ -84,13 +84,14 @@ func Generate(opts Options, input io.Reader, output io.Writer) error {
 	}
 	urlopts := opts.Style
 	if opts.Scale != 0 {
-		urlopts += fmt.Sprintf(";scale=%d", opts.Scale)
+		urlopts += fmt.Sprintf(";scale:%d", opts.Scale)
 	}
 	if len(opts.Direction) > 0 {
-		urlopts += fmt.Sprintf(";dir=%s", opts.Direction)
+		urlopts += fmt.Sprintf(";dir:%s", opts.Direction)
 	}
 	targetURL := fmt.Sprintf("%s/%s/%s/", BaseURL, urlopts, opts.Use)
 
+	fmt.Printf("url: %s\n", targetURL)
 	bs, err := ioutil.ReadAll(input)
 	if err != nil {
 		return err
@@ -113,7 +114,7 @@ func Generate(opts Options, input io.Reader, output io.Writer) error {
 	if err != nil {
 		return err
 	}
-	filename := strings.SplitN(string(bs), ".", 2)[0] + opts.Format
+	filename := strings.SplitN(string(bs), ".", 2)[0] + "." + opts.Format
 
 	targetURL = targetURL + filename
 	res, err := http.Get(targetURL)
