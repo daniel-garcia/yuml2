@@ -6,7 +6,7 @@ dependencies (runtimes or libraries) which makes it ideal to
 integrate in to your build processes. It also supports using
 private yuml services.
 
-[![GoDoc](https://godoc.org/github.com/daniel-garcia/yuml2?status.png)](https://godoc.org/github.com/daniel-garcia/yuml2)
+[![GoDoc](https://godoc.org/github.com/daniel-garcia/yuml2/go-yuml?status.png)](https://godoc.org/github.com/daniel-garcia/yuml2/go-yuml)
 
 Installation
 ------------
