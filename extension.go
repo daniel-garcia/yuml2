@@ -14,9 +14,10 @@ func getExtensionType(defaultType, filename string) (string, error) {
 
 	if len(defaultType) == 0 {
 		ext := filepath.Ext(filename)
-		if len(ext) == 0 {
+		if len(ext) < 2 || !strings.HasPrefix(ext, ".") {
 			return "", unknownExtension
 		}
+		ext = ext[1:]
 		defaultType = ext
 	}
 	defaultType = strings.ToLower(defaultType)
