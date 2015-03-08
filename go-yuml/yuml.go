@@ -91,7 +91,6 @@ func Generate(opts Options, input io.Reader, output io.Writer) error {
 	}
 	targetURL := fmt.Sprintf("%s/%s/%s/", BaseURL, urlopts, opts.Use)
 
-	fmt.Printf("url: %s\n", targetURL)
 	bs, err := ioutil.ReadAll(input)
 	if err != nil {
 		return err
