@@ -4,10 +4,12 @@ PDIR=/go/src/github.com/daniel-garcia/yuml2
 DOCKER_IMAGE=golang:1.3-cross
 
 CIRCLE_ARTIFACTS?=output
-OUTPUT=$(CIRCLE_ARTIFACTS)
+OUTPUT=output
 
 binaries: $(OUTPUT)/windows/386/yuml2.exe $(OUTPUT)/windows/amd64/yuml2.exe $(OUTPUT)/linux/386/yuml2 $(OUTPUT)/linux/amd64/yuml2 $(OUTPUT)/darwin/386/yuml2 $(OUTPUT)/darwin/amd64/yuml2
-
+	if [ ! -z "$(CIRCLE_ARTIFACTS)" ]; then \
+	cp -R output/* $(CIRCLE_ARTIFACTS)/ ; \
+	fi
 
 $(OUTPUT)/windows/386/yuml2.exe:
 	mkdir -p $(OUTPUT)/windows/386
