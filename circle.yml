@@ -1,6 +1,10 @@
 machine:
   services:
     - docker
+dependencies:
+  override:
+    - docker info
+    - docker pull golang:1.3-cross
 test:
   override:
     - cd go-yuml && go test -cover -v
