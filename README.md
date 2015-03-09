@@ -15,6 +15,16 @@ Installation
 go get github.com/daniel-garcia/yuml2
 ```
 
+Or you can download binaries for your platform:
+
+  * [Mac OS X, 386](https://circle-artifacts.com/gh/daniel-garcia/yuml2/10/artifacts/0/tmp/circle-artifacts.DxLWOl2/darwin/386/yuml2)
+  * [Mac OS X, amd64](https://circle-artifacts.com/gh/daniel-garcia/yuml2/10/artifacts/0/tmp/circle-artifacts.DxLWOl2/darwin/amd64/yuml2)
+  * [Linux, 386](https://circle-artifacts.com/gh/daniel-garcia/yuml2/10/artifacts/0/tmp/circle-artifacts.DxLWOl2/linux/386/yuml2)
+  * [Linux, amd64](https://circle-artifacts.com/gh/daniel-garcia/yuml2/10/artifacts/0/tmp/circle-artifacts.DxLWOl2/linux/amd64/yuml2)
+  * [Windows, 386](https://circle-artifacts.com/gh/daniel-garcia/yuml2/10/artifacts/0/tmp/circle-artifacts.DxLWOl2/windows/386/yuml2.exe)
+  * [Windows, amd64](https://circle-artifacts.com/gh/daniel-garcia/yuml2/10/artifacts/0/tmp/circle-artifacts.DxLWOl2/windows/amd64/yuml2.exe)
+
+
 Usage
 -----
 
