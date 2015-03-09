@@ -1,0 +1,10 @@
+machine:
+  services:
+    - docker
+  environment:
+    PROJECT_ROOT: ${GOPATH%%:*}/src/github.com/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}
+test:
+  override:
+    - cd $PROJECT_ROOT && go test -cover -v
+  post:
+    - cd $PROJECT_ROOT && make
